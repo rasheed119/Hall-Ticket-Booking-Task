@@ -109,7 +109,7 @@ app.get("/customers/booked",(req,res)=>{
 })
 
 // 5. List customer's bookings
-app.get("/customer/booked/:id",(req,res)=>{
+app.get("/customers/booked/:id",(req,res)=>{
     const {id} = req.params;
     const customer_bookings = bookings.filter((obj)=>obj.bookingId == id)
     const customerbooking = customer_bookings.map((booking)=>{
