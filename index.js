@@ -42,7 +42,7 @@ let bookings = [
 // 1. Creating a Room with seatsavailable, amenities in room, price for  one hour  
 app.post("/room",(req,res)=>{
     const { roomName, seatsAvailable, amenities, pricePerHour } = req.body;
-    {const room = {
+    const room = {
         roomID : Rooms.length + 1,
         roomName,
         seatsAvailable,
@@ -50,7 +50,7 @@ app.post("/room",(req,res)=>{
         pricePerHour
     };
     Rooms.push(room);
-    res.send(Rooms);}
+    res.send(Rooms);
 })
 
 // 2. Booking a Room customerName, date, startTime, endTime
